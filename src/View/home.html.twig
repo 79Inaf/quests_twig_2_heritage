@@ -1,4 +1,18 @@
-<!doctype html>
+{% extends "layout.html.twig" %}
+
+{% block title %}
+	{{ parent() }}
+	- Accueil
+{% endblock %}
+
+{% block content %}
+	{% for product in products %}
+		<li>{{ product }}</li>
+	{% endfor %}
+{% endblock %}
+
+
+{# <!doctype html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -11,4 +25,4 @@
 <body>
     <h1>Hello {{ name }} !</h1>
 </body>
-</html>
+</html> #}
